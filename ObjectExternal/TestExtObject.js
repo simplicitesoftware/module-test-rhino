@@ -21,15 +21,20 @@ TestExtObject.display = function(params) {
 	} else if (type == "json") {
 		this.setMIMEType(HTTPTool.MIME_TYPE_JSON); // Must force the MIME type
 		return new JSONObject().put("hello", "world");
-	} else {
+	} else if (type == "html") {
 		this.setDecoration(false);
-		var root = params.getRoot();
-		var wp = new JQueryWebPage(root, this.getDisplay());
+		var wp = new JQueryWebPage(params.getRoot(), this.getDisplay());
+		wp.appendCore(this.getGrant());
 		wp.appendAjax();
-		wp.appendCSSInclude(HTMLPage.getResourceCSSURL(this, "STYLES"));
-		wp.appendJSInclude(HTMLPage.getResourceJSURL(this, "SCRIPT"));
-		wp.setReady(this.getName() + ".render(\"" + root + "\");");
-		wp.append("<div id=\"test\"></div>");
+		wp.appendMustache();
+		wp.setBodyCSSClass(this.getName().toLowerCase());
+		wp.appendCSSInclude(HTMLTool.getResourceCSSURL(this, "STYLES"));
+		wp.appendJSInclude(HTMLTool.getResourceJSURL(this, "SCRIPT"));
+		wp.append(HTMLTool.getResourceHTMLContent(this, "TEMPLATE"));
+		wp.setReady(this.getName() + ".render();");
 		return wp.toString();
+	} else {
+		this.addMustache();
+		return this.javascript(this.getName() + ".render();");
 	}
 };
