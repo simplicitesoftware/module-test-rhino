@@ -1759,7 +1759,7 @@ PostgreSQL:
 		<res_code>SCRIPT</res_code>
 		<res_cached>0</res_cached>
 		<res_file>ObjectInternal/TestObject1-resources/SCRIPT.js</res_file>
-		<res_file_compiled/>
+		<res_file_compiled>ObjectInternal/TestObject1-resources/SCRIPT.min.js</res_file_compiled>
 		<res_image/>
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 	</data>
