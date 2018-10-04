@@ -1268,7 +1268,7 @@ PostgreSQL:
 		<obo_name>TestUser</obo_name>
 		<obo_dbtable>m_user</obo_dbtable>
 		<obo_class/>
-		<obo_script_id>ObjectInternal/User.js</obo_script_id>
+		<obo_script_id>ObjectInternal/TestUser.js</obo_script_id>
 		<obo_usets>1</obo_usets>
 		<obo_nosearch>1</obo_nosearch>
 		<obo_comment/>

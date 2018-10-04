@@ -18,14 +18,6 @@ components:
         tstLdapLogin:
           description: Login
           type: string
-    ArrayOfTestObjectDS:
-      type: array
-      items:
-        $ref: '#/components/schemas/TestObjectDS'
-    ArrayOfTestObject1a:
-      type: array
-      items:
-        $ref: '#/components/schemas/TestObject1a'
     TestObjectDS:
       type: object
       properties:
@@ -76,6 +68,33 @@ components:
           type: object
         tstObj1Address:
           description: Address
+          type: string
+    PublicationResult:
+      type: object
+      properties:
+        mime:
+          description: MIME type
+          type: string
+        content:
+          description: Content (plain text or base64 encoded)
+          type: string
+    ArrayOfTestLDAP:
+      type: array
+      items:
+        $ref: '#/components/schemas/TestLDAP'
+    ArrayOfTestObjectDS:
+      type: array
+      items:
+        $ref: '#/components/schemas/TestObjectDS'
+    ArrayOfTestObject1a:
+      type: array
+      items:
+        $ref: '#/components/schemas/TestObject1a'
+    ActionResult:
+      type: object
+      properties:
+        result:
+          description: Action result
           type: string
     TestObject1:
       type: object
@@ -138,10 +157,6 @@ components:
       type: array
       items:
         $ref: '#/components/schemas/TestObject1'
-    ArrayOfTestLDAP:
-      type: array
-      items:
-        $ref: '#/components/schemas/TestLDAP'
     TestUser:
       type: object
       properties:
@@ -328,7 +343,7 @@ paths:
           type: string
         in: path
         name: tstLdapUID
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -383,7 +398,7 @@ paths:
           type: string
         in: path
         name: tstLdapUID
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -422,7 +437,7 @@ paths:
           type: string
         in: path
         name: tstLdapUID
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       tags:
       - TestLDAP
@@ -447,7 +462,7 @@ paths:
           type: string
         in: path
         name: tstLdapUID
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -481,6 +496,32 @@ paths:
         required: false
       tags:
       - TestLDAP
+  /rest/TestUser/{row_id}/pivot:User-WORD:
+    get:
+      security:
+      - bearerAuth: []
+      description: Call custom publication for one object record or all object records
+      operationId: obj-testuser-publication-user-word
+      responses:
+        '200':
+          description: Custom publication result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PublicationResult'
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestUser
   /logout:
     get:
       security:
@@ -498,6 +539,58 @@ paths:
             application/json: {}
       tags:
       - Application
+  /rest/TestUser/{row_id}/pivot:User-EXCEL:
+    get:
+      security:
+      - bearerAuth: []
+      description: Call custom publication for one object record or all object records
+      operationId: obj-testuser-publication-user-excel
+      responses:
+        '200':
+          description: Custom publication result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PublicationResult'
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestUser
+  /rest/TestUser/{row_id}/pivot:User-DEFAULT:
+    get:
+      security:
+      - bearerAuth: []
+      description: Call custom publication for one object record or all object records
+      operationId: obj-testuser-publication-user-default
+      responses:
+        '200':
+          description: Custom publication result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PublicationResult'
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestUser
   /rest:
     get:
       security:
@@ -545,7 +638,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -629,7 +722,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -668,7 +761,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       tags:
       - TestObject1a
@@ -693,7 +786,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -783,6 +876,30 @@ paths:
       - schema:
           type: boolean
         in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _indexsearch
+        description: Index search query
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _crosstab
+        description: Apply pivot table
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _crosstabcubes
+        description: pivot table data as cubes?
+        required: false
+      - schema:
+          type: boolean
+        in: query
         name: _doc
         description: Documentation?
         required: false
@@ -823,6 +940,30 @@ paths:
         in: query
         name: _metadata
         description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _indexsearch
+        description: Index search query
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _crosstab
+        description: Apply pivot table
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _crosstabcubes
+        description: pivot table data as cubes?
         required: false
       - schema:
           type: boolean
@@ -914,6 +1055,30 @@ paths:
         in: query
         name: _metadata
         description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _indexsearch
+        description: Index search query
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _crosstab
+        description: Apply pivot table
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _crosstabcubes
+        description: pivot table data as cubes?
         required: false
       - schema:
           type: boolean
@@ -1164,6 +1329,30 @@ paths:
       - schema:
           type: boolean
         in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _indexsearch
+        description: Index search query
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _crosstab
+        description: Apply pivot table
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _crosstabcubes
+        description: pivot table data as cubes?
+        required: false
+      - schema:
+          type: boolean
+        in: query
         name: _doc
         description: Documentation?
         required: false
@@ -1221,7 +1410,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -1270,7 +1459,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -1309,7 +1498,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       tags:
       - TestObject2
@@ -1334,7 +1523,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -1362,6 +1551,32 @@ paths:
         required: false
       tags:
       - TestObject2
+  /rest/TestUser/{row_id}/pivot:User-VCARD:
+    get:
+      security:
+      - bearerAuth: []
+      description: Call custom publication for one object record or all object records
+      operationId: obj-testuser-publication-user-vcard
+      responses:
+        '200':
+          description: Custom publication result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PublicationResult'
+        '401':
+          description: Authentication error
+          content:
+            application/json: {}
+      parameters:
+      - schema:
+          type: string
+        in: path
+        name: row_id
+        description: row ID (or _ for all row IDs)
+        required: true
+      tags:
+      - TestUser
   /rest/TestObjectDS/{tstDSId}:
     post:
       security:
@@ -1384,7 +1599,7 @@ paths:
           type: string
         in: path
         name: tstDSId
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -1421,7 +1636,7 @@ paths:
           type: string
         in: path
         name: tstDSId
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -1460,7 +1675,7 @@ paths:
           type: string
         in: path
         name: tstDSId
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       tags:
       - TestObjectDS
@@ -1485,7 +1700,7 @@ paths:
           type: string
         in: path
         name: tstDSId
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -1523,7 +1738,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -1762,7 +1977,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -1801,7 +2016,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       tags:
       - TestUser
@@ -1826,7 +2041,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -2066,7 +2281,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -2144,7 +2359,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -2183,7 +2398,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       tags:
       - TestObject1
@@ -2208,7 +2423,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID
+        description: row ID (or _ for all row IDs)
         required: true
       - schema:
           type: string
@@ -2288,6 +2503,30 @@ paths:
         in: query
         name: _metadata
         description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _indexsearch
+        description: Index search query
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _crosstab
+        description: Apply pivot table
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _crosstabcubes
+        description: pivot table data as cubes?
         required: false
       - schema:
           type: boolean
@@ -2373,6 +2612,30 @@ paths:
         in: query
         name: _metadata
         description: Metadata?
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _count
+        description: Count?
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _indexsearch
+        description: Index search query
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: _crosstab
+        description: Apply pivot table
+        required: false
+      - schema:
+          type: boolean
+        in: query
+        name: _crosstabcubes
+        description: pivot table data as cubes?
         required: false
       - schema:
           type: boolean
