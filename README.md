@@ -6,6 +6,24 @@
 
 This module is for testing standard features
 
+`TestLDAP` business object definition
+-------------------------------------
+
+Test LDAP object
+
+### Fields
+
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
+| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| `tstLdapLogin`                                               | char(100)                                |          |           |          | LDAP `cn` attribute                                                              |
+| `tstLdapFirstName`                                           | char(100)                                |          | yes       |          | LDAP `givenName` attribute                                                       |
+| `tstLdapLastName`                                            | char(100)                                |          | yes       |          | LDAP `sn` attribute                                                              |
+| `tstLdapFullName`                                            | char(255)                                |          |           |          | Full name                                                                        |
+
+### Custom actions
+
+No custom action
+
 `TestObject1` business object definition
 ----------------------------------------
 
@@ -13,14 +31,16 @@ This module is for testing standard features
 
 ### Fields
 
-| Name                                                         | Type                                     | Req | Upd | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | --- | --- | -------------------------------------------------------------------------------- |
-| `tstObj1Code`                                                | regexp(20)                               | x*  |     | -                                                                                |
-| `tstObj1Desc`                                                | html(4000)                               |     | x   | -                                                                                |
-| `tstObj1File`                                                | document                                 |     | x   | File                                                                             |
-| `tstObj1List`                                                | enum(7) using `TST_OBJ1_LIST` list       |     | x   | List                                                                             |
-| `tstObj1Address`                                             | char(100)                                |     | x   | Address                                                                          |
-| `tstObj1Coords`                                              | geocoords                                |     | x   | -                                                                                |
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
+| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| `tstObj1Code`                                                | regexp(20)                               | yes*     |           |          | -                                                                                |
+| `tstObj1Desc`                                                | html(4000)                               |          | yes       |          | -                                                                                |
+| `tstObj1File`                                                | document                                 |          | yes       |          | File                                                                             |
+| `tstObj1List`                                                | enum(7) using `TST_OBJ1_LIST` list       |          | yes       |          | List                                                                             |
+| `tstObj1Address`                                             | char(100)                                |          | yes       |          | Address                                                                          |
+| `tstObj1Coords`                                              | geocoords                                |          | yes       |          | -                                                                                |
+| `TestObject1_TestJavaObject_id` link to **`TestJavaObject`** | id                                       |          | yes       |          | -                                                                                |
+| `tstObj1Lookup`                                              | char(256)                                |          | yes       |          | Lookup                                                                           |
 
 ### Lists
 
@@ -41,9 +61,9 @@ No custom action
 
 ### Fields
 
-| Name                                                         | Type                                     | Req | Upd | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | --- | --- | -------------------------------------------------------------------------------- |
-| `tst1aDesc`                                                  | char(100)                                |     | x   | -                                                                                |
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
+| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| `tst1aDesc`                                                  | char(100)                                |          | yes       |          | -                                                                                |
 
 ### Custom actions
 
@@ -56,12 +76,12 @@ No custom action
 
 ### Fields
 
-| Name                                                         | Type                                     | Req | Upd | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | --- | --- | -------------------------------------------------------------------------------- |
-| `tstObj2Obj1Id` link to **`TestObject1`**                    | id                                       | x*  | x   | -                                                                                |
-| _Ref. `tstObj2Obj1Id.tstObj1Code`_                           | _regexp(20)_                             |     |     | -                                                                                |
-| _Ref. `tstObj2Obj1Id.tstObj1Address`_                        | _char(100)_                              |     |     | _Address_                                                                        |
-| _Ref. `tstObj2Obj1Id.tstObj1Coords`_                         | _geocoords_                              |     |     | -                                                                                |
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
+| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| `tstObj2Obj1Id` link to **`TestObject1`**                    | id                                       | yes*     | yes       |          | -                                                                                |
+| _Ref. `tstObj2Obj1Id.tstObj1Code`_                           | _regexp(20)_                             |          |           |          | -                                                                                |
+| _Ref. `tstObj2Obj1Id.tstObj1Address`_                        | _char(100)_                              |          |           |          | _Address_                                                                        |
+| _Ref. `tstObj2Obj1Id.tstObj1Coords`_                         | _geocoords_                              |          |           |          | -                                                                                |
 
 ### Custom actions
 
@@ -74,9 +94,9 @@ No custom action
 
 ### Fields
 
-| Name                                                         | Type                                     | Req | Upd | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | --- | --- | -------------------------------------------------------------------------------- |
-| `tstDSLabel`                                                 | char(100)                                | x*  | x   | -                                                                                |
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
+| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
+| `tstDSLabel`                                                 | char(100)                                | yes*     | yes       |          | -                                                                                |
 
 ### Custom actions
 
@@ -89,10 +109,16 @@ No custom action
 
 ### Fields
 
-| Name                                                         | Type                                     | Req | Upd | Description                                                                      | 
-| ------------------------------------------------------------ | ---------------------------------------- | --- | --- | -------------------------------------------------------------------------------- |
+| Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
+| ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
 
 ### Custom actions
 
 No custom action
+
+`TestExtObject` external object definition
+------------------------------------------
+
+
+
 
