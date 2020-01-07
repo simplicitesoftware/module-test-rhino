@@ -1,4 +1,11 @@
-![](https://www.simplicite.io/resources//logos/logo250.png)
+<!--
+ ___ _            _ _    _ _    __
+/ __(_)_ __  _ __| (_)__(_) |_ /_/
+\__ \ | '  \| '_ \ | / _| |  _/ -_)
+|___/_|_|_|_| .__/_|_\__|_|\__\___|
+            |_| 
+-->
+![](https://docs.simplicite.io//logos/logo250.png)
 * * *
 
 `Test` module definition
@@ -27,7 +34,7 @@ No custom action
 `TestObject1` business object definition
 ----------------------------------------
 
-
+Example 1 object
 
 ### Fields
 
@@ -36,11 +43,13 @@ No custom action
 | `tstObj1Code`                                                | regexp(20)                               | yes*     |           |          | -                                                                                |
 | `tstObj1Desc`                                                | html(4000)                               |          | yes       |          | -                                                                                |
 | `tstObj1File`                                                | document                                 |          | yes       |          | File                                                                             |
-| `tstObj1List`                                                | enum(7) using `TST_OBJ1_LIST` list       |          | yes       |          | List                                                                             |
+| `tstObj1Image`                                               | image                                    |          | yes       |          | Image                                                                            |
+| `tstObj1List`                                                | multi(30) using `TST_OBJ1_LIST` list     |          | yes       |          | List                                                                             |
+| `tstObj1Year`                                                | enum(7) using `TST_OBJ1_YEAR` list       |          | yes       |          | Year (dynamic)                                                                   |
 | `tstObj1Address`                                             | char(100)                                |          | yes       |          | Address                                                                          |
 | `tstObj1Coords`                                              | geocoords                                |          | yes       |          | -                                                                                |
-| `TestObject1_TestJavaObject_id` link to **`TestJavaObject`** | id                                       |          | yes       |          | -                                                                                |
 | `tstObj1Lookup`                                              | char(256)                                |          | yes       |          | Lookup                                                                           |
+| `tstObj1Date`                                                | date                                     |          | yes       |          | -                                                                                |
 
 ### Lists
 
@@ -49,6 +58,8 @@ No custom action
     - `V2` Val 2
     - `V3` Val 3
     - `V4` Val 4
+* `TST_OBJ1_YEAR`
+    - `NONE` 
 
 ### Custom actions
 

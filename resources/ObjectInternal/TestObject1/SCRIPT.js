@@ -30,7 +30,7 @@ TestObject1 = (function(ui) {
 						}, "TESTOBJECT1_LIST", l);
 					});
 					ui.loadScript({
-						url: "https://maps.googleapis.com/maps/api/js?key=" + Simplicite.GOOGLE_API_KEY + "&libraries=places",
+						url: Simplicite.GOOGLE_MAPS_JS_URL,
 						onload: function() {
 							if (list) {
 								autocomplete(app.DEFAULT_ROW_ID); // Create on list
