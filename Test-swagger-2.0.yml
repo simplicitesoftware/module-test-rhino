@@ -60,7 +60,7 @@ paths:
       parameters:
       - in: path
         name: tstLdapUID
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - schema:
@@ -98,7 +98,7 @@ paths:
       parameters:
       - in: path
         name: tstLdapUID
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - in: query
@@ -147,7 +147,7 @@ paths:
       parameters:
       - in: path
         name: tstLdapUID
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       tags:
@@ -183,7 +183,7 @@ paths:
       parameters:
       - in: path
         name: tstLdapUID
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - schema:
@@ -239,7 +239,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - schema:
@@ -277,7 +277,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - in: query
@@ -326,7 +326,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       tags:
@@ -362,7 +362,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - schema:
@@ -402,7 +402,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       tags:
@@ -1389,8 +1389,8 @@ paths:
         - BE
         - CH
         - IE
-        - US
         - CA
+        - US
       - in: query
         name: row_module_id
         description: Search filter for Module
@@ -1556,7 +1556,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - schema:
@@ -1594,7 +1594,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - in: query
@@ -1643,7 +1643,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       tags:
@@ -1679,7 +1679,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - schema:
@@ -1719,7 +1719,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       tags:
@@ -1752,7 +1752,7 @@ paths:
       parameters:
       - in: path
         name: tstDSId
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - schema:
@@ -1790,7 +1790,7 @@ paths:
       parameters:
       - in: path
         name: tstDSId
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - in: query
@@ -1839,7 +1839,7 @@ paths:
       parameters:
       - in: path
         name: tstDSId
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       tags:
@@ -1875,7 +1875,7 @@ paths:
       parameters:
       - in: path
         name: tstDSId
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - schema:
@@ -1915,7 +1915,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       tags:
@@ -1948,7 +1948,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - schema:
@@ -1986,7 +1986,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - in: query
@@ -2035,7 +2035,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       tags:
@@ -2071,7 +2071,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - schema:
@@ -2110,7 +2110,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - schema:
@@ -2148,7 +2148,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - in: query
@@ -2197,7 +2197,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       tags:
@@ -2233,7 +2233,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       - schema:
@@ -2440,7 +2440,7 @@ paths:
       parameters:
       - in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         type: string
         required: true
       tags:
@@ -3364,8 +3364,8 @@ definitions:
         - BE
         - CH
         - IE
-        - US
         - CA
+        - US
       usr_title:
         description: Title
         type: string

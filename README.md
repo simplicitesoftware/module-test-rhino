@@ -27,10 +27,6 @@ Test LDAP object
 | `tstLdapLastName`                                            | char(100)                                |          | yes       |          | LDAP `sn` attribute                                                              |
 | `tstLdapFullName`                                            | char(255)                                |          |           |          | Full name                                                                        |
 
-### Custom actions
-
-No custom action
-
 `TestObject1` business object definition
 ----------------------------------------
 
@@ -45,7 +41,7 @@ Example 1 object
 | `tstObj1File`                                                | document                                 |          | yes       |          | File                                                                             |
 | `tstObj1Image`                                               | image                                    |          | yes       |          | Image                                                                            |
 | `tstObj1List`                                                | multi(30) using `TST_OBJ1_LIST` list     |          | yes       |          | List                                                                             |
-| `tstObj1Year`                                                | enum(7) using `TST_OBJ1_YEAR` list       |          | yes       |          | Year (dynamic)                                                                   |
+| `tstObj1Year`                                                | enum(4) using `TST_OBJ1_YEAR` list       |          | yes       |          | Year (dynamic)                                                                   |
 | `tstObj1Address`                                             | char(100)                                |          | yes       |          | Address                                                                          |
 | `tstObj1Coords`                                              | geocoords                                |          | yes       |          | -                                                                                |
 | `tstObj1Lookup`                                              | char(256)                                |          | yes       |          | Lookup                                                                           |
@@ -61,10 +57,6 @@ Example 1 object
 * `TST_OBJ1_YEAR`
     - `NONE` 
 
-### Custom actions
-
-No custom action
-
 `TestObject1a` business object definition
 -----------------------------------------
 
@@ -75,10 +67,6 @@ No custom action
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
 | `tst1aDesc`                                                  | char(100)                                |          | yes       |          | -                                                                                |
-
-### Custom actions
-
-No custom action
 
 `TestObject2` business object definition
 ----------------------------------------
@@ -94,10 +82,6 @@ No custom action
 | _Ref. `tstObj2Obj1Id.tstObj1Address`_                        | _char(100)_                              |          |           |          | _Address_                                                                        |
 | _Ref. `tstObj2Obj1Id.tstObj1Coords`_                         | _geocoords_                              |          |           |          | -                                                                                |
 
-### Custom actions
-
-No custom action
-
 `TestObjectDS` business object definition
 -----------------------------------------
 
@@ -109,10 +93,6 @@ No custom action
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
 | `tstDSLabel`                                                 | char(100)                                | yes*     | yes       |          | -                                                                                |
 
-### Custom actions
-
-No custom action
-
 `TestUser` business object definition
 -------------------------------------
 
@@ -122,10 +102,6 @@ No custom action
 
 | Name                                                         | Type                                     | Required | Updatable | Personal | Description                                                                      | 
 | ------------------------------------------------------------ | ---------------------------------------- | -------- | --------- | -------- | -------------------------------------------------------------------------------- |
-
-### Custom actions
-
-No custom action
 
 `TestExtObject` external object definition
 ------------------------------------------

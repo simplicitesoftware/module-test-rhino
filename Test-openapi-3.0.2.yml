@@ -916,8 +916,8 @@ components:
           - BE
           - CH
           - IE
-          - US
           - CA
+          - US
         usr_title:
           description: Title
           type: string
@@ -1112,7 +1112,7 @@ paths:
           type: string
         in: path
         name: tstLdapUID
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestLDAP
@@ -1151,7 +1151,7 @@ paths:
           type: string
         in: path
         name: tstLdapUID
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -1212,7 +1212,7 @@ paths:
           type: string
         in: path
         name: tstLdapUID
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestLDAP
@@ -1262,7 +1262,7 @@ paths:
           type: string
         in: path
         name: tstLdapUID
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestLDAP
@@ -1326,7 +1326,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestObject1a
@@ -1365,7 +1365,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -1426,7 +1426,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestObject1a
@@ -1476,7 +1476,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestObject1a
@@ -1517,7 +1517,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestUser
@@ -2558,8 +2558,8 @@ paths:
           - BE
           - CH
           - IE
-          - US
           - CA
+          - US
         in: query
         name: usr_country
         description: Search filter for Country
@@ -2767,7 +2767,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestObject2
@@ -2806,7 +2806,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -2867,7 +2867,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestObject2
@@ -2917,7 +2917,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestObject2
@@ -2958,7 +2958,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestUser
@@ -3003,7 +3003,7 @@ paths:
           type: string
         in: path
         name: tstDSId
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestObjectDS
@@ -3042,7 +3042,7 @@ paths:
           type: string
         in: path
         name: tstDSId
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -3103,7 +3103,7 @@ paths:
           type: string
         in: path
         name: tstDSId
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestObjectDS
@@ -3153,7 +3153,7 @@ paths:
           type: string
         in: path
         name: tstDSId
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestObjectDS
@@ -3194,7 +3194,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestUser
@@ -3239,7 +3239,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestUser
@@ -3278,7 +3278,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -3339,7 +3339,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestUser
@@ -3389,7 +3389,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestUser
@@ -3434,7 +3434,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestObject1
@@ -3473,7 +3473,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       - schema:
           type: boolean
@@ -3534,7 +3534,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestObject1
@@ -3584,7 +3584,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestObject1
@@ -3820,7 +3820,7 @@ paths:
           type: string
         in: path
         name: row_id
-        description: row ID (or empty or _ for all row IDs)
+        description: Row ID (or empty or _ for all row IDs)
         required: true
       tags:
       - TestUser

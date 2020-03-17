@@ -6,9 +6,9 @@
 	<data>
 		<mdl_name>Test</mdl_name>
 		<mdl_version>4.0</mdl_version>
-		<mdl_prefix/>
+		<mdl_prefix>test</mdl_prefix>
 		<mdl_url><![CDATA[https://www.simplicite.io/resources/modules/test-app-4.0.xml]]></mdl_url>
-		<mdl_lastupd>2019-10-30 16:02:34</mdl_lastupd>
+		<mdl_lastupd>2020-02-27 10:51:58</mdl_lastupd>
 		<mdl_comment><![CDATA[This module is for testing standard features]]></mdl_comment>
 	</data>
 </object>
@@ -25,6 +25,7 @@
 	"url": "mysql://127.0.0.1:3306/test?autoReconnect=true&useSSL=false&useUnicode=yes&characterEncoding=utf8&characterResultSets=utf8"
 }
 ]]></sys_value>
+		<sys_value2/>
 		<sys_type>PRV</sys_type>
 		<sys_desc><![CDATA[Test datasource
 
@@ -148,14 +149,6 @@ PostgreSQL:
 		<rsp_login_id.usr_login>designer</rsp_login_id.usr_login>
 		<rsp_group_id.grp_name>TEST_USER</rsp_group_id.grp_name>
 		<rsp_start_dt>2017-01-01</rsp_start_dt>
-		<rsp_end_dt/>
-		<rsp_activ>1</rsp_activ>
-		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
-	</data>
-	<data>
-		<rsp_login_id.usr_login>simplicite@simplicite.fr</rsp_login_id.usr_login>
-		<rsp_group_id.grp_name>PUBLIC</rsp_group_id.grp_name>
-		<rsp_start_dt>2016-01-01</rsp_start_dt>
 		<rsp_end_dt/>
 		<rsp_activ>1</rsp_activ>
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
@@ -423,6 +416,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -459,6 +453,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -495,6 +490,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -531,6 +527,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -567,6 +564,7 @@ PostgreSQL:
 		<fld_more>1</fld_more>
 		<fld_listmore>1</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -603,6 +601,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -639,6 +638,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -675,6 +675,7 @@ PostgreSQL:
 		<fld_more>1</fld_more>
 		<fld_listmore>1</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -711,6 +712,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -747,6 +749,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>15</fld_type>
 		<fld_type_id.flt_code>CODE</fld_type_id.flt_code>
 		<fld_enumlist/>
@@ -783,6 +786,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>25</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -819,6 +823,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>4</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -855,6 +860,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>11</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -891,6 +897,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>17</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -927,6 +934,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>20</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -963,6 +971,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>14</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist>TST_OBJ1_LIST</fld_enumlist>
@@ -999,6 +1008,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -1035,6 +1045,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -1071,6 +1082,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>7</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist>TST1_YEAR</fld_enumlist>
@@ -1107,6 +1119,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
+		<fld_tray/>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_enumlist/>
@@ -1305,6 +1318,8 @@ PostgreSQL:
 		<obo_dashboard>1</obo_dashboard>
 		<obo_prefix/>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
 		<obo_name>TestObject1</obo_name>
@@ -1365,6 +1380,8 @@ PostgreSQL:
 		<obo_dashboard>1</obo_dashboard>
 		<obo_prefix/>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
 		<obo_name>TestObject1a</obo_name>
@@ -1425,6 +1442,8 @@ PostgreSQL:
 		<obo_dashboard>1</obo_dashboard>
 		<obo_prefix/>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
 		<obo_name>TestObject2</obo_name>
@@ -1485,6 +1504,8 @@ PostgreSQL:
 		<obo_dashboard>1</obo_dashboard>
 		<obo_prefix/>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
 		<obo_name>TestObjectDS</obo_name>
@@ -1545,6 +1566,8 @@ PostgreSQL:
 		<obo_dashboard>1</obo_dashboard>
 		<obo_prefix/>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 	<data>
 		<obo_name>TestUser</obo_name>
@@ -1605,6 +1628,8 @@ PostgreSQL:
 		<obo_dashboard>1</obo_dashboard>
 		<obo_prefix/>
 		<obo_search_ts/>
+		<obo_minrows/>
+		<obo_maxrows/>
 	</data>
 </object>
 <object>
@@ -2232,7 +2257,7 @@ PostgreSQL:
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 	</data>
 	<data>
-		<fct_name>TestExtObject</fct_name>
+		<fct_name>TestExtObject-E</fct_name>
 		<fct_object_id.obj_type>E</fct_object_id.obj_type>
 		<fct_object_id.obj_name>TestExtObject</fct_object_id.obj_name>
 		<fct_function>L</fct_function>
@@ -2310,7 +2335,7 @@ PostgreSQL:
 	</data>
 	<data>
 		<grt_group_id.grp_name>TEST_USER</grt_group_id.grp_name>
-		<grt_function_id.fct_name>TestExtObject</grt_function_id.fct_name>
+		<grt_function_id.fct_name>TestExtObject-E</grt_function_id.fct_name>
 		<grt_function_id.fct_object_id.obj_type>E</grt_function_id.fct_object_id.obj_type>
 		<grt_function_id.fct_object_id.obj_name>TestExtObject</grt_function_id.fct_object_id.obj_name>
 		<grt_function_id.fct_action_id.act_name/>
