@@ -34,15 +34,6 @@ components:
         tstLdapLogin:
           description: LDAP `cn` attribute
           type: string
-    TestObjectDS:
-      type: object
-      properties:
-        tstDSLabel:
-          description: Label
-          type: string
-        tstDSId:
-          description: ID
-          type: string
     ArrayOfTestUser:
       type: array
       items:
@@ -56,6 +47,7 @@ components:
         tstObj1Coords:
           description: Coordinates
           type: string
+          example: latitude;longitude
         tstObj1Lookup:
           description: Lookup
           type: string
@@ -96,6 +88,7 @@ components:
         tstObj1Date:
           description: Date
           type: string
+          example: yyyy-MM-dd
         row_id:
           description: Unique technical row ID
           type: string
@@ -118,10 +111,6 @@ components:
       type: array
       items:
         $ref: '#/components/schemas/TestLDAP'
-    ArrayOfTestObjectDS:
-      type: array
-      items:
-        $ref: '#/components/schemas/TestObjectDS'
     ArrayOfTestObject1a:
       type: array
       items:
@@ -147,6 +136,7 @@ components:
         tstObj1Coords:
           description: Coordinates
           type: string
+          example: latitude;longitude
         tstObj1Lookup:
           description: Lookup
           type: string
@@ -184,6 +174,7 @@ components:
         tstObj1Date:
           description: Date
           type: string
+          example: yyyy-MM-dd
         row_id:
           description: Unique technical row ID
           type: string
@@ -211,6 +202,7 @@ components:
         tstObj2Obj1Id__tstObj1Coords:
           description: Coordinates
           type: string
+          example: latitude;longitude
     ArrayOfTestObject2:
       type: array
       items:
@@ -290,15 +282,12 @@ components:
           - SystemV/YST9YDT
           - US/Alaska
           - AST
-          - America/Dawson
           - America/Ensenada
           - America/Los_Angeles
           - America/Santa_Isabel
           - America/Tijuana
           - America/Vancouver
-          - America/Whitehorse
           - Canada/Pacific
-          - Canada/Yukon
           - Etc/GMT+8
           - Mexico/BajaNorte
           - PST8PDT
@@ -312,6 +301,7 @@ components:
           - America/Cambridge_Bay
           - America/Chihuahua
           - America/Creston
+          - America/Dawson
           - America/Dawson_Creek
           - America/Denver
           - America/Edmonton
@@ -322,8 +312,10 @@ components:
           - America/Ojinaga
           - America/Phoenix
           - America/Shiprock
+          - America/Whitehorse
           - America/Yellowknife
           - Canada/Mountain
+          - Canada/Yukon
           - Etc/GMT+7
           - MST7MDT
           - Mexico/BajaSur
@@ -497,6 +489,7 @@ components:
           - America/Mendoza
           - America/Miquelon
           - America/Montevideo
+          - America/Nuuk
           - America/Paramaribo
           - America/Punta_Arenas
           - America/Recife
@@ -893,9 +886,6 @@ components:
         usr_image_id:
           description: Picture
           type: object
-        usr_subhead:
-          description: Sub-head
-          type: boolean
         usr_minrows:
           description: Min size of lists
           type: integer
@@ -916,8 +906,8 @@ components:
           - BE
           - CH
           - IE
-          - CA
           - US
+          - CA
         usr_title:
           description: Title
           type: string
@@ -928,15 +918,13 @@ components:
         usr_logout:
           description: Logout
           type: string
+          example: yyyy-MM-dd HH:mm:ss
         usr_home_id__viw_name:
           description: Home page
           type: string
         usr_menu_defdomain_id:
           description: Domain menu by default
           type: string
-        usr_menu_defhidden:
-          description: deprecated
-          type: boolean
         usr_menu_defcollapsed:
           description: Menu collapsed by default
           type: boolean
@@ -946,6 +934,7 @@ components:
         usr_last_logon:
           description: Last logon
           type: string
+          example: yyyy-MM-dd HH:mm:ss
         usr_first_name:
           description: First name
           type: string
@@ -1008,9 +997,6 @@ components:
         usr_state:
           description: State
           type: string
-        usr_extra:
-          description: Extra zone visible
-          type: boolean
         usr_dateformat:
           description: Date format
           type: string
@@ -1547,65 +1533,6 @@ paths:
         required: false
       tags:
       - session
-  /rest/TestObjectDS:
-    get:
-      summary: Search TestObjectDS business object records or get contextualized metadata
-      security:
-      - bearerAuth: []
-      operationId: obj-testobjectds-search
-      responses:
-        '200':
-          description: Success in searching business object records (or in getting
-            contextualized business object metadata, documentation, ...)
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ArrayOfTestObjectDS'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-      parameters:
-      - schema:
-          type: boolean
-        in: query
-        name: _metadata
-        description: Metadata?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _count
-        description: Count?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _doc
-        description: Documentation?
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: tstDSId
-        description: Search filter for ID
-        required: false
-      - schema:
-          type: string
-        in: query
-        name: tstDSLabel
-        description: Search filter for Label
-        required: false
-      tags:
-      - TestObjectDS
   /rest/TestObject1a:
     get:
       summary: Search TestObject1a business object records or get contextualized metadata
@@ -1784,23 +1711,14 @@ paths:
       - schema:
           type: string
         in: query
-        name: usr_login
-        description: Search filter for Login
-        required: false
-      - schema:
-          type: string
-          enum:
-          - ENU
-          - FRA
-        in: query
-        name: usr_lang
-        description: Search filter for Language
-        required: false
-      - schema:
-          type: string
-        in: query
         name: usr_image_id
         description: Search filter for Picture
+        required: false
+      - schema:
+          type: string
+        in: query
+        name: usr_login
+        description: Search filter for Login
         required: false
       - schema:
           type: string
@@ -1836,15 +1754,12 @@ paths:
           - SystemV/YST9YDT
           - US/Alaska
           - AST
-          - America/Dawson
           - America/Ensenada
           - America/Los_Angeles
           - America/Santa_Isabel
           - America/Tijuana
           - America/Vancouver
-          - America/Whitehorse
           - Canada/Pacific
-          - Canada/Yukon
           - Etc/GMT+8
           - Mexico/BajaNorte
           - PST8PDT
@@ -1858,6 +1773,7 @@ paths:
           - America/Cambridge_Bay
           - America/Chihuahua
           - America/Creston
+          - America/Dawson
           - America/Dawson_Creek
           - America/Denver
           - America/Edmonton
@@ -1868,8 +1784,10 @@ paths:
           - America/Ojinaga
           - America/Phoenix
           - America/Shiprock
+          - America/Whitehorse
           - America/Yellowknife
           - Canada/Mountain
+          - Canada/Yukon
           - Etc/GMT+7
           - MST7MDT
           - Mexico/BajaSur
@@ -2043,6 +1961,7 @@ paths:
           - America/Mendoza
           - America/Miquelon
           - America/Montevideo
+          - America/Nuuk
           - America/Paramaribo
           - America/Punta_Arenas
           - America/Recife
@@ -2452,17 +2371,6 @@ paths:
       - schema:
           type: string
           enum:
-          - '0'
-          - '1'
-          - '2'
-          - '3'
-        in: query
-        name: usr_active
-        description: Search filter for Active
-        required: false
-      - schema:
-          type: string
-          enum:
           - MR
           - MRS
           - MS
@@ -2473,20 +2381,40 @@ paths:
       - schema:
           type: string
         in: query
-        name: usr_last_name
-        description: Search filter for Last name
-        required: false
-      - schema:
-          type: string
-        in: query
         name: usr_first_name
         description: Search filter for First name
         required: false
       - schema:
           type: string
         in: query
+        name: usr_last_name
+        description: Search filter for Last name
+        required: false
+      - schema:
+          type: string
+          enum:
+          - ENU
+          - FRA
+        in: query
+        name: usr_lang
+        description: Search filter for Language
+        required: false
+      - schema:
+          type: string
+        in: query
         name: usr_email
         description: Search filter for Email address
+        required: false
+      - schema:
+          type: string
+          enum:
+          - '0'
+          - '1'
+          - '2'
+          - '3'
+        in: query
+        name: usr_active
+        description: Search filter for Active
         required: false
       - schema:
           type: string
@@ -2558,8 +2486,8 @@ paths:
           - BE
           - CH
           - IE
-          - CA
           - US
+          - CA
         in: query
         name: usr_country
         description: Search filter for Country
@@ -2585,12 +2513,6 @@ paths:
       - schema:
           type: boolean
         in: query
-        name: usr_menu_defhidden
-        description: Search filter for deprecated
-        required: false
-      - schema:
-          type: boolean
-        in: query
         name: usr_menu_defcollapsed
         description: Search filter for Menu collapsed by default
         required: false
@@ -2605,18 +2527,6 @@ paths:
         in: query
         name: usr_menu_defdomain_id__obd_name
         description: Search filter for Default opened domain
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: usr_extra
-        description: Search filter for Extra zone visible
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: usr_subhead
-        description: Search filter for Sub-head
         required: false
       - schema:
           type: string
@@ -2962,201 +2872,6 @@ paths:
         required: true
       tags:
       - TestUser
-  /rest/TestObjectDS/{tstDSId}:
-    post:
-      summary: Create a new TestObjectDSbusiness object record
-      security:
-      - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/TestObjectDS'
-      operationId: obj-testobjectds-create
-      responses:
-        '200':
-          description: Success in creating a new business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TestObjectDS'
-        '400':
-          description: Bad request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: tstDSId
-        description: Row ID (or empty or _ for all row IDs)
-        required: true
-      tags:
-      - TestObjectDS
-    get:
-      summary: Get a TestObjectDS business object record
-      security:
-      - bearerAuth: []
-      operationId: obj-testobjectds-get
-      responses:
-        '200':
-          description: Success in getting a single business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TestObjectDS'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: tstDSId
-        description: Row ID (or empty or _ for all row IDs)
-        required: true
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_documents
-        description: Inline documents?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        required: false
-      - schema:
-          type: boolean
-        in: query
-        name: _inline_objects
-        description: Inline objects?
-        required: false
-      tags:
-      - TestObjectDS
-    delete:
-      summary: Delete a TestObjectDS business object record
-      security:
-      - bearerAuth: []
-      operationId: obj-testobjectds-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-          content:
-            application/json: {}
-        '400':
-          description: Bad request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: tstDSId
-        description: Row ID (or empty or _ for all row IDs)
-        required: true
-      tags:
-      - TestObjectDS
-    put:
-      summary: Update a TestObjectDSbusiness object record
-      security:
-      - bearerAuth: []
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/TestObjectDS'
-      operationId: obj-testobjectds-update
-      responses:
-        '200':
-          description: Success in updating a business object record
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TestObjectDS'
-        '400':
-          description: Bad request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error400'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error401'
-        '500':
-          description: Internal server error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error500'
-        '404':
-          description: Not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error404'
-      parameters:
-      - schema:
-          type: string
-        in: path
-        name: tstDSId
-        description: Row ID (or empty or _ for all row IDs)
-        required: true
-      tags:
-      - TestObjectDS
   /rest/TestUser/{row_id}/publication:User-DEFAULT:
     get:
       summary: Call a custom publication for a TestUser business object record or
@@ -3844,7 +3559,5 @@ tags:
   description: Object 1a
 - name: TestObject2
   description: Object 2
-- name: TestObjectDS
-  description: Test datasource
 - name: TestUser
   description: Test user

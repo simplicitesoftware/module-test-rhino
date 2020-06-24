@@ -430,56 +430,6 @@ paths:
         required: false
       tags:
       - session
-  /rest/TestObjectDS:
-    get:
-      summary: Search TestObjectDS business object records or get contextualized metadata
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-testobjectds-search
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/ArrayOfTestObjectDS'
-          description: Success in searching business object records (or in getting
-            contextualized business object metadata, documentation, ...)
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: query
-        name: _metadata
-        description: Metadata?
-        type: boolean
-        required: false
-      - in: query
-        name: _count
-        description: Count?
-        type: boolean
-        required: false
-      - in: query
-        name: _doc
-        description: Documentation?
-        type: boolean
-        required: false
-      - in: query
-        name: tstDSId
-        description: Search filter for ID
-        type: string
-        required: false
-      - in: query
-        name: tstDSLabel
-        description: Search filter for Label
-        type: string
-        required: false
-      tags:
-      - TestObjectDS
   /rest/TestObject1a:
     get:
       summary: Search TestObject1a business object records or get contextualized metadata
@@ -631,21 +581,13 @@ paths:
         type: boolean
         required: false
       - in: query
-        name: usr_login
-        description: Search filter for Login
-        type: string
-        required: false
-      - in: query
-        name: usr_lang
-        description: Search filter for Language
-        type: string
-        required: false
-        enum:
-        - ENU
-        - FRA
-      - in: query
         name: usr_image_id
         description: Search filter for Picture
+        type: string
+        required: false
+      - in: query
+        name: usr_login
+        description: Search filter for Login
         type: string
         required: false
       - in: query
@@ -685,15 +627,12 @@ paths:
         - SystemV/YST9YDT
         - US/Alaska
         - AST
-        - America/Dawson
         - America/Ensenada
         - America/Los_Angeles
         - America/Santa_Isabel
         - America/Tijuana
         - America/Vancouver
-        - America/Whitehorse
         - Canada/Pacific
-        - Canada/Yukon
         - Etc/GMT+8
         - Mexico/BajaNorte
         - PST8PDT
@@ -707,6 +646,7 @@ paths:
         - America/Cambridge_Bay
         - America/Chihuahua
         - America/Creston
+        - America/Dawson
         - America/Dawson_Creek
         - America/Denver
         - America/Edmonton
@@ -717,8 +657,10 @@ paths:
         - America/Ojinaga
         - America/Phoenix
         - America/Shiprock
+        - America/Whitehorse
         - America/Yellowknife
         - Canada/Mountain
+        - Canada/Yukon
         - Etc/GMT+7
         - MST7MDT
         - Mexico/BajaSur
@@ -892,6 +834,7 @@ paths:
         - America/Mendoza
         - America/Miquelon
         - America/Montevideo
+        - America/Nuuk
         - America/Paramaribo
         - America/Punta_Arenas
         - America/Recife
@@ -1293,16 +1236,6 @@ paths:
         type: integer
         required: false
       - in: query
-        name: usr_active
-        description: Search filter for Active
-        type: string
-        required: false
-        enum:
-        - '0'
-        - '1'
-        - '2'
-        - '3'
-      - in: query
         name: usr_title
         description: Search filter for Title
         type: string
@@ -1312,20 +1245,38 @@ paths:
         - MRS
         - MS
       - in: query
-        name: usr_last_name
-        description: Search filter for Last name
-        type: string
-        required: false
-      - in: query
         name: usr_first_name
         description: Search filter for First name
         type: string
         required: false
       - in: query
+        name: usr_last_name
+        description: Search filter for Last name
+        type: string
+        required: false
+      - in: query
+        name: usr_lang
+        description: Search filter for Language
+        type: string
+        required: false
+        enum:
+        - ENU
+        - FRA
+      - in: query
         name: usr_email
         description: Search filter for Email address
         type: string
         required: false
+      - in: query
+        name: usr_active
+        description: Search filter for Active
+        type: string
+        required: false
+        enum:
+        - '0'
+        - '1'
+        - '2'
+        - '3'
       - in: query
         name: usr_home_id
         description: Search filter for Home page
@@ -1389,8 +1340,8 @@ paths:
         - BE
         - CH
         - IE
-        - CA
         - US
+        - CA
       - in: query
         name: row_module_id
         description: Search filter for Module
@@ -1407,11 +1358,6 @@ paths:
         type: boolean
         required: false
       - in: query
-        name: usr_menu_defhidden
-        description: Search filter for deprecated
-        type: boolean
-        required: false
-      - in: query
         name: usr_menu_defcollapsed
         description: Search filter for Menu collapsed by default
         type: boolean
@@ -1425,16 +1371,6 @@ paths:
         name: usr_menu_defdomain_id__obd_name
         description: Search filter for Default opened domain
         type: string
-        required: false
-      - in: query
-        name: usr_extra
-        description: Search filter for Extra zone visible
-        type: boolean
-        required: false
-      - in: query
-        name: usr_subhead
-        description: Search filter for Sub-head
-        type: boolean
         required: false
       - in: query
         name: usr_logout
@@ -1724,168 +1660,6 @@ paths:
         required: true
       tags:
       - TestUser
-  /rest/TestObjectDS/{tstDSId}:
-    post:
-      summary: Create a new TestObjectDSbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-testobjectds-create
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/TestObjectDS'
-          description: Success in creating a new business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-      parameters:
-      - in: path
-        name: tstDSId
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/TestObjectDS'
-        in: body
-        name: body
-      tags:
-      - TestObjectDS
-      consumes:
-      - application/json
-    get:
-      summary: Get a TestObjectDS business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-testobjectds-get
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/TestObjectDS'
-          description: Success in getting a single business object record
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: tstDSId
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - in: query
-        name: _inline_documents
-        description: Inline documents?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_thumbnails
-        description: Inline documents' thumbnails?
-        type: boolean
-        required: false
-      - in: query
-        name: _inline_objects
-        description: Inline objects?
-        type: boolean
-        required: false
-      tags:
-      - TestObjectDS
-    delete:
-      summary: Delete a TestObjectDS business object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-testobjectds-delete
-      responses:
-        '200':
-          description: Success in deleting a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: tstDSId
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      tags:
-      - TestObjectDS
-    put:
-      summary: Update a TestObjectDSbusiness object record
-      security:
-      - bearerAuth: []
-      produces:
-      - application/json
-      operationId: obj-testobjectds-update
-      responses:
-        '200':
-          schema:
-            $ref: '#/definitions/TestObjectDS'
-          description: Success in updating a business object record
-        '400':
-          schema:
-            $ref: '#/definitions/Error400'
-          description: Bad request
-        '401':
-          schema:
-            $ref: '#/definitions/Error401'
-          description: Unauthorized
-        '500':
-          schema:
-            $ref: '#/definitions/Error500'
-          description: Internal server error
-        '404':
-          schema:
-            $ref: '#/definitions/Error404'
-          description: Not found
-      parameters:
-      - in: path
-        name: tstDSId
-        description: Row ID (or empty or _ for all row IDs)
-        type: string
-        required: true
-      - schema:
-          $ref: '#/definitions/TestObjectDS'
-        in: body
-        name: body
-      tags:
-      - TestObjectDS
-      consumes:
-      - application/json
   /rest/TestUser/{row_id}/publication:User-DEFAULT:
     get:
       summary: Call a custom publication for a TestUser business object record or
@@ -2482,15 +2256,6 @@ definitions:
       tstLdapLogin:
         description: LDAP `cn` attribute
         type: string
-  TestObjectDS:
-    type: object
-    properties:
-      tstDSLabel:
-        description: Label
-        type: string
-      tstDSId:
-        description: ID
-        type: string
   ArrayOfTestUser:
     type: array
     items:
@@ -2504,6 +2269,7 @@ definitions:
       tstObj1Coords:
         description: Coordinates
         type: string
+        example: latitude;longitude
       tstObj1Lookup:
         description: Lookup
         type: string
@@ -2544,6 +2310,7 @@ definitions:
       tstObj1Date:
         description: Date
         type: string
+        example: yyyy-MM-dd
       row_id:
         description: Unique technical row ID
         type: string
@@ -2566,10 +2333,6 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/TestLDAP'
-  ArrayOfTestObjectDS:
-    type: array
-    items:
-      $ref: '#/definitions/TestObjectDS'
   ArrayOfTestObject1a:
     type: array
     items:
@@ -2595,6 +2358,7 @@ definitions:
       tstObj1Coords:
         description: Coordinates
         type: string
+        example: latitude;longitude
       tstObj1Lookup:
         description: Lookup
         type: string
@@ -2632,6 +2396,7 @@ definitions:
       tstObj1Date:
         description: Date
         type: string
+        example: yyyy-MM-dd
       row_id:
         description: Unique technical row ID
         type: string
@@ -2659,6 +2424,7 @@ definitions:
       tstObj2Obj1Id__tstObj1Coords:
         description: Coordinates
         type: string
+        example: latitude;longitude
   ArrayOfTestObject2:
     type: array
     items:
@@ -2738,15 +2504,12 @@ definitions:
         - SystemV/YST9YDT
         - US/Alaska
         - AST
-        - America/Dawson
         - America/Ensenada
         - America/Los_Angeles
         - America/Santa_Isabel
         - America/Tijuana
         - America/Vancouver
-        - America/Whitehorse
         - Canada/Pacific
-        - Canada/Yukon
         - Etc/GMT+8
         - Mexico/BajaNorte
         - PST8PDT
@@ -2760,6 +2523,7 @@ definitions:
         - America/Cambridge_Bay
         - America/Chihuahua
         - America/Creston
+        - America/Dawson
         - America/Dawson_Creek
         - America/Denver
         - America/Edmonton
@@ -2770,8 +2534,10 @@ definitions:
         - America/Ojinaga
         - America/Phoenix
         - America/Shiprock
+        - America/Whitehorse
         - America/Yellowknife
         - Canada/Mountain
+        - Canada/Yukon
         - Etc/GMT+7
         - MST7MDT
         - Mexico/BajaSur
@@ -2945,6 +2711,7 @@ definitions:
         - America/Mendoza
         - America/Miquelon
         - America/Montevideo
+        - America/Nuuk
         - America/Paramaribo
         - America/Punta_Arenas
         - America/Recife
@@ -3341,9 +3108,6 @@ definitions:
       usr_image_id:
         description: Picture
         type: object
-      usr_subhead:
-        description: Sub-head
-        type: boolean
       usr_minrows:
         description: Min size of lists
         type: integer
@@ -3364,8 +3128,8 @@ definitions:
         - BE
         - CH
         - IE
-        - CA
         - US
+        - CA
       usr_title:
         description: Title
         type: string
@@ -3376,15 +3140,13 @@ definitions:
       usr_logout:
         description: Logout
         type: string
+        example: yyyy-MM-dd HH:mm:ss
       usr_home_id__viw_name:
         description: Home page
         type: string
       usr_menu_defdomain_id:
         description: Domain menu by default
         type: string
-      usr_menu_defhidden:
-        description: deprecated
-        type: boolean
       usr_menu_defcollapsed:
         description: Menu collapsed by default
         type: boolean
@@ -3394,6 +3156,7 @@ definitions:
       usr_last_logon:
         description: Last logon
         type: string
+        example: yyyy-MM-dd HH:mm:ss
       usr_first_name:
         description: First name
         type: string
@@ -3456,9 +3219,6 @@ definitions:
       usr_state:
         description: State
         type: string
-      usr_extra:
-        description: Extra zone visible
-        type: boolean
       usr_dateformat:
         description: Date format
         type: string
@@ -3499,7 +3259,5 @@ tags:
   description: Object 1a
 - name: TestObject2
   description: Object 2
-- name: TestObjectDS
-  description: Test datasource
 - name: TestUser
   description: Test user

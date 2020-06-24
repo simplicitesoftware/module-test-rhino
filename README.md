@@ -11,7 +11,9 @@
 `Test` module definition
 ========================
 
-This module is for testing standard features
+This module is for testing platform features.
+
+All items in this module are developped in Rhino.
 
 `TestLDAP` business object definition
 -------------------------------------

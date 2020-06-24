@@ -1,4 +1,4 @@
-if (typeof TestExtObject === "undefined") TestExtObject = (function($) {
+var TestExtObject = TestExtObject || (function($) {
 	var app;
 
 	function render() {
