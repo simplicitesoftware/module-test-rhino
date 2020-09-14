@@ -11,3 +11,11 @@ TestObject1.postLoad = function() {
 TestObject1.preValidate = function() {
 	console.log("TestObject1.preValidate called for " + this.getName());
 };
+
+TestObject1.initUpdate = function() {
+	var obj = this.getGrant().getPanelObject("TestObject2", "tstObj2Obj1Id");
+	//var obj = this.getGrant().getTmpObject("TestObject2");
+	//obj.resetFilters();
+	//obj.getField("tstObj2Obj1Id").setFilter(this.getRowId());
+	console.log("Nb objects 2: " + obj.count());
+};

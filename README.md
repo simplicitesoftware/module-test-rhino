@@ -83,6 +83,8 @@ Example 1 object
 | _Ref. `tstObj2Obj1Id.tstObj1Code`_                           | _regexp(20)_                             |          |           |          | -                                                                                |
 | _Ref. `tstObj2Obj1Id.tstObj1Address`_                        | _char(100)_                              |          |           |          | _Address_                                                                        |
 | _Ref. `tstObj2Obj1Id.tstObj1Coords`_                         | _geocoords_                              |          |           |          | -                                                                                |
+| `tstObj2Number`                                              | int(100)                                 | yes*     | yes       |          | -                                                                                |
+| `tstObj2Label`                                               | char(100)                                |          | yes       |          | -                                                                                |
 
 `TestObjectDS` business object definition
 -----------------------------------------

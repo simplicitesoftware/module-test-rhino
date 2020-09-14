@@ -84,6 +84,7 @@ PostgreSQL:
 		<viw_scope/>
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 		<viw_theme_id.thm_name/>
+		<viw_lang/>
 	</data>
 </object>
 <object>
@@ -118,6 +119,7 @@ PostgreSQL:
 		<usr_logout/>
 		<usr_last_logon/>
 		<usr_dateformat/>
+		<usr_lang_pref>ENU</usr_lang_pref>
 		<usr_uuid>6b5c40bb-ee25-4e63-a717-cc1525b00db2</usr_uuid>
 	</data>
 </object>
@@ -445,6 +447,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -481,6 +484,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -517,6 +521,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -553,6 +558,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[LDAP `givenName` attribute]]></fld_comment>
@@ -589,6 +595,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc><![CDATA[[VALUE:tstLdapFirstName] + " " + [VALUE:tstLdapLastName] + " (" + [VALUE:tstLdapLogin] + ")"]]></fld_calc>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Full name]]></fld_comment>
@@ -625,6 +632,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[LDAP `sn` attribute]]></fld_comment>
@@ -661,6 +669,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[LDAP `cn` attribute]]></fld_comment>
@@ -697,6 +706,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[LDAP `uid` attribute]]></fld_comment>
@@ -733,6 +743,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Address]]></fld_comment>
@@ -769,6 +780,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -805,6 +817,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -841,6 +854,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -877,6 +891,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -913,6 +928,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[File]]></fld_comment>
@@ -949,6 +965,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Image]]></fld_comment>
@@ -985,6 +1002,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering>HCB</fld_rendering>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[List]]></fld_comment>
@@ -1021,6 +1039,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Lookup]]></fld_comment>
@@ -1057,6 +1076,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1093,9 +1113,84 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment><![CDATA[Year (dynamic)]]></fld_comment>
+		<fld_classification/>
+		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fld_name>tstObj2Label</fld_name>
+		<fld_dbname>obj2_label</fld_dbname>
+		<fld_visible>3</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>0</fld_required>
+		<fld_fonctid>0</fld_fonctid>
+		<fld_research>1</fld_research>
+		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
+		<fld_more>0</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum/>
+		<fld_tray>0</fld_tray>
+		<fld_type>3</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_list_id.lov_name/>
+		<fld_copy>1</fld_copy>
+		<fld_size>100</fld_size>
+		<fld_minsize/>
+		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault/>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering/>
+		<fld_speech/>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment/>
+		<fld_classification/>
+		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
+	</data>
+	<data>
+		<fld_name>tstObj2Number</fld_name>
+		<fld_dbname>obj2_number</fld_dbname>
+		<fld_visible>3</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>1</fld_required>
+		<fld_fonctid>1</fld_fonctid>
+		<fld_research>1</fld_research>
+		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
+		<fld_more>0</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum/>
+		<fld_tray>0</fld_tray>
+		<fld_type>1</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_list_id.lov_name/>
+		<fld_copy>1</fld_copy>
+		<fld_size>100</fld_size>
+		<fld_minsize/>
+		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault/>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering/>
+		<fld_speech/>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment/>
 		<fld_classification/>
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 	</data>
@@ -1129,6 +1224,7 @@ PostgreSQL:
 		<fld_case/>
 		<fld_righttoleft>0</fld_righttoleft>
 		<fld_rendering/>
+		<fld_speech/>
 		<fld_calc/>
 		<fld_objlist/>
 		<fld_comment/>
@@ -1149,6 +1245,14 @@ PostgreSQL:
 	</data>
 	<data>
 		<tpl_name>TestObject1</tpl_name>
+		<tpl_ui><![CDATA[<div class="area" data-area="1"></div>
+]]></tpl_ui>
+		<tpl_min/>
+		<tpl_image/>
+		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tpl_name>TestObject2</tpl_name>
 		<tpl_ui><![CDATA[<div class="area" data-area="1"></div>
 ]]></tpl_ui>
 		<tpl_min/>
@@ -1188,20 +1292,14 @@ PostgreSQL:
   <div class="field" data-field="tstObj1Code"></div>
   <div class="field" data-field="tstObj1Desc"></div>
   <div class="row">
-    <div class="col-sm-5">
-      <div class="field" data-field="tstObj1File"></div>
-    </div>
-    <div class="col-sm-7">
-      <div class="field" data-field="tstObj1Image"></div>
-    </div>
-  </div>
-  <div class="row">
     <div class="col-sm-6">
+      <div class="field" data-field="tstObj1File"></div>
       <div class="field" data-field="tstObj1List"></div>
       <div class="field" data-field="tstObj1Address"></div>
       <div class="field" data-field="tstObj1Date"></div>
     </div>
     <div class="col-sm-6">
+      <div class="field" data-field="tstObj1Image"></div>
       <div class="field" data-field="tstObj1Year"></div>
       <div class="field" data-field="tstObj1Coords"></div>
       <div class="field" data-field="tstObj1Lookup"></div>
@@ -1210,6 +1308,36 @@ PostgreSQL:
 </div>
 ]]></ofa_ui>
 		<ofa_icon>building</ofa_icon>
+		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
+	</data>
+	<data>
+		<ofa_name>TestObject2-1</ofa_name>
+		<ofa_position>1</ofa_position>
+		<ofa_title>0</ofa_title>
+		<ofa_ui><![CDATA[<div>
+  <div class="field" data-field="tstObj2Obj1Id"></div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="field" data-field="tstObj2Obj1Id__tstObj1Code"></div>
+    </div>
+    <div class="col-sm-4">
+      <div class="field" data-field="tstObj2Obj1Id__tstObj1Address"></div>
+    </div>
+    <div class="col-sm-4">
+      <div class="field" data-field="tstObj2Obj1Id__tstObj1Coords"></div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="field" data-field="tstObj2Number"></div>
+    </div>
+    <div class="col-sm-8">
+      <div class="field" data-field="tstObj2Label"></div>
+    </div>
+  </div>
+</div>
+]]></ofa_ui>
+		<ofa_icon/>
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 	</data>
 </object>
@@ -1453,7 +1581,7 @@ PostgreSQL:
 		<obo_indexable>0</obo_indexable>
 		<obo_groupby>0</obo_groupby>
 		<obo_dfltref/>
-		<obo_template_id.tpl_name>Base</obo_template_id.tpl_name>
+		<obo_template_id.tpl_name>TestObject2</obo_template_id.tpl_name>
 		<obo_cache>D</obo_cache>
 		<obo_copy>1</obo_copy>
 		<obo_export>1</obo_export>
@@ -2087,8 +2215,8 @@ PostgreSQL:
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>TestObject2-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2116,8 +2244,8 @@ PostgreSQL:
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault><![CDATA[[EXPR:Tool.format("TEST-%05d", Long.valueOf(Tool.parseLong([ROWID])))]]]></obf_field_id.fld_dfault>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>TestObject2-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2145,8 +2273,8 @@ PostgreSQL:
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>TestObject2-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2174,8 +2302,66 @@ PostgreSQL:
 		<obf_fld_researchreq/>
 		<obf_fld_dfault/>
 		<obf_field_id.fld_dfault/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>TestObject2-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
+		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
+	</data>
+	<data>
+		<obf_object_id.obo_name>TestObject2</obf_object_id.obo_name>
+		<obf_field_id.fld_name>tstObj2Number</obf_field_id.fld_name>
+		<obf_field_id.fld_type>1</obf_field_id.fld_type>
+		<obf_order>140</obf_order>
+		<obf_group_by/>
+		<obf_dfault_order>1</obf_dfault_order>
+		<obf_input/>
+		<obf_ref_field_id.fld_name/>
+		<obf_ref_object_id.obo_name/>
+		<obf_cascad/>
+		<obf_card/>
+		<obf_visible/>
+		<obf_ref_export>1</obf_ref_export>
+		<obf_copy/>
+		<obf_ref_order/>
+		<obf_fld_visible/>
+		<obf_fld_required/>
+		<obf_fld_updatable/>
+		<obf_fld_research/>
+		<obf_fld_more/>
+		<obf_fld_listmore/>
+		<obf_fld_researchreq/>
+		<obf_fld_dfault/>
+		<obf_field_id.fld_dfault/>
+		<obf_area_id.ofa_name>TestObject2-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
+		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
+	</data>
+	<data>
+		<obf_object_id.obo_name>TestObject2</obf_object_id.obo_name>
+		<obf_field_id.fld_name>tstObj2Label</obf_field_id.fld_name>
+		<obf_field_id.fld_type>3</obf_field_id.fld_type>
+		<obf_order>150</obf_order>
+		<obf_group_by/>
+		<obf_dfault_order/>
+		<obf_input/>
+		<obf_ref_field_id.fld_name/>
+		<obf_ref_object_id.obo_name/>
+		<obf_cascad/>
+		<obf_card/>
+		<obf_visible/>
+		<obf_ref_export>1</obf_ref_export>
+		<obf_copy/>
+		<obf_ref_order/>
+		<obf_fld_visible/>
+		<obf_fld_required/>
+		<obf_fld_updatable/>
+		<obf_fld_research/>
+		<obf_fld_more/>
+		<obf_fld_listmore/>
+		<obf_fld_researchreq/>
+		<obf_fld_dfault/>
+		<obf_field_id.fld_dfault/>
+		<obf_area_id.ofa_name>TestObject2-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2231,8 +2417,8 @@ PostgreSQL:
 		<obf_inline>0</obf_inline>
 		<obf_rendering/>
 		<obf_treedepth/>
-		<obf_area_id.ofa_name/>
-		<obf_area_id.ofa_position/>
+		<obf_area_id.ofa_name>TestObject2-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 	</data>
 </object>
@@ -2808,6 +2994,30 @@ PostgreSQL:
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>tstObj2Label</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Label</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>tstObj2Number</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Number</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>tstObj2Obj1Id</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Object 1</tsl_value>
@@ -3048,6 +3258,30 @@ PostgreSQL:
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>tstObj2Label</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>tst obj 2label</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>tstObj2Number</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>tst obj 2number</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>tstObj2Obj1Id</tsl_id.fld_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Objet 1</tsl_value>
@@ -3078,6 +3312,13 @@ PostgreSQL:
 	</data>
 	<data>
 		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>TestObject2-1</tsl_id.ofa_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Object 2</tsl_value>
+		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
 		<tsl_id.ofa_name>TestLDAP-1</tsl_id.ofa_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>TestLDAP-1</tsl_value>
@@ -3088,6 +3329,13 @@ PostgreSQL:
 		<tsl_id.ofa_name>TestObject1-1</tsl_id.ofa_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>AppTest-1</tsl_value>
+		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
+	</data>
+	<data>
+		<tsl_typeFieldArea>Z</tsl_typeFieldArea>
+		<tsl_id.ofa_name>TestObject2-1</tsl_id.ofa_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>TestObject2-1</tsl_value>
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 	</data>
 </object>

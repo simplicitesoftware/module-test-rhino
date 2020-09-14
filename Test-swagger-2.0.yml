@@ -1340,8 +1340,8 @@ paths:
         - BE
         - CH
         - IE
-        - US
         - CA
+        - US
       - in: query
         name: row_module_id
         description: Search filter for Module
@@ -1349,7 +1349,7 @@ paths:
         required: false
       - in: query
         name: row_module_id__mdl_name
-        description: Search filter for Module Name
+        description: Search filter for Module name
         type: string
         required: false
       - in: query
@@ -1392,6 +1392,14 @@ paths:
         - DMY
         - MDY
         - CHF
+      - in: query
+        name: usr_lang_pref
+        description: Search filter for Preferred language
+        type: string
+        required: false
+        enum:
+        - ENU
+        - FRA
       - in: query
         name: usr_uuid
         description: Search filter for UUID
@@ -2183,6 +2191,16 @@ paths:
         description: Search filter for Coordinates
         type: string
         required: false
+      - in: query
+        name: tstObj2Number
+        description: Search filter for Number
+        type: integer
+        required: false
+      - in: query
+        name: tstObj2Label
+        description: Search filter for Label
+        type: string
+        required: false
       tags:
       - TestObject2
   /rest/TestUser/{row_id}/publication:User-WORD:
@@ -2411,6 +2429,12 @@ definitions:
     properties:
       tstObj2Obj1Id__tstObj1Code:
         description: Code
+        type: string
+      tstObj2Number:
+        description: Number
+        type: integer
+      tstObj2Label:
+        description: Label
         type: string
       tstObj2Obj1Id:
         description: Object 1
@@ -3103,7 +3127,7 @@ definitions:
         - Etc/GMT-14
         - Pacific/Kiritimati
       row_module_id__mdl_name:
-        description: Module Name
+        description: Module name
         type: string
       usr_image_id:
         description: Picture
@@ -3128,8 +3152,8 @@ definitions:
         - BE
         - CH
         - IE
-        - US
         - CA
+        - US
       usr_title:
         description: Title
         type: string
@@ -3198,6 +3222,12 @@ definitions:
       usr_city:
         description: City
         type: string
+      usr_lang_pref:
+        description: Preferred language
+        type: string
+        enum:
+        - ENU
+        - FRA
       usr_lang:
         description: Language
         type: string

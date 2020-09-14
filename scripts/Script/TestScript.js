@@ -1,2 +1,5 @@
-// This is a comment
-console.log("Hello world!");
+var TestScript = TestScript || {
+	sayHello: function() {
+		console.log("Hello world!");
+	}
+};
