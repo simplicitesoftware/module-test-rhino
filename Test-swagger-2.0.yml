@@ -2,7 +2,7 @@
 # / __(_)_ __  _ __| (_)__(_) |_ /_/
 # \__ \ | '  \| '_ \ | / _| |  _/ -_)
 # |___/_|_|_|_| .__/_|_\__|_|\__\___|
-#             |_| Module: Test 4.0
+#             |_| Module: Test 5
 paths:
   /login:
     get:
@@ -430,6 +430,56 @@ paths:
         required: false
       tags:
       - session
+  /rest/TestObjectDS:
+    get:
+      summary: Search TestObjectDS business object records or get contextualized metadata
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testobjectds-search
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/ArrayOfTestObjectDS'
+          description: Success in searching business object records (or in getting
+            contextualized business object metadata, documentation, ...)
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: query
+        name: _metadata
+        description: Metadata?
+        type: boolean
+        required: false
+      - in: query
+        name: _count
+        description: Count?
+        type: boolean
+        required: false
+      - in: query
+        name: _doc
+        description: Documentation?
+        type: boolean
+        required: false
+      - in: query
+        name: tstDSId
+        description: Search filter for ID
+        type: string
+        required: false
+      - in: query
+        name: tstDSLabel
+        description: Search filter for Label
+        type: string
+        required: false
+      tags:
+      - TestObjectDS
   /rest/TestObject1a:
     get:
       summary: Search TestObject1a business object records or get contextualized metadata
@@ -509,7 +559,6 @@ paths:
         type: string
         required: false
         enum:
-        - '2020'
         - '2021'
         - '2022'
         - '2023'
@@ -520,6 +569,7 @@ paths:
         - '2028'
         - '2029'
         - '2030'
+        - '2031'
       - in: query
         name: tstObj1Address
         description: Search filter for Address
@@ -538,6 +588,11 @@ paths:
       - in: query
         name: tstObj1Date
         description: Search filter for Date
+        type: string
+        required: false
+      - in: query
+        name: tstObj1Notepad
+        description: Search filter for Notepad
         type: string
         required: false
       tags:
@@ -640,7 +695,6 @@ paths:
         - SystemV/PST8
         - SystemV/PST8PDT
         - US/Pacific
-        - US/Pacific-New
         - PST
         - America/Boise
         - America/Cambridge_Bay
@@ -967,6 +1021,7 @@ paths:
         - Africa/Gaborone
         - Africa/Harare
         - Africa/Johannesburg
+        - Africa/Juba
         - Africa/Khartoum
         - Africa/Kigali
         - Africa/Lubumbashi
@@ -1012,7 +1067,6 @@ paths:
         - Africa/Asmera
         - Africa/Dar_es_Salaam
         - Africa/Djibouti
-        - Africa/Juba
         - Africa/Kampala
         - Africa/Mogadishu
         - Africa/Nairobi
@@ -1030,6 +1084,7 @@ paths:
         - Europe/Minsk
         - Europe/Moscow
         - Europe/Simferopol
+        - Europe/Volgograd
         - Indian/Antananarivo
         - Indian/Comoro
         - Indian/Mayotte
@@ -1048,7 +1103,6 @@ paths:
         - Europe/Samara
         - Europe/Saratov
         - Europe/Ulyanovsk
-        - Europe/Volgograd
         - Indian/Mahe
         - Indian/Mauritius
         - Indian/Reunion
@@ -1111,7 +1165,6 @@ paths:
         - Etc/GMT-7
         - Indian/Christmas
         - VST
-        - Antarctica/Casey
         - Asia/Brunei
         - Asia/Choibalsan
         - Asia/Chongqing
@@ -1160,6 +1213,7 @@ paths:
         - Australia/Yancowinna
         - ACT
         - Antarctica/DumontDUrville
+        - Antarctica/Macquarie
         - Asia/Ust-Nera
         - Asia/Vladivostok
         - Australia/ACT
@@ -1184,7 +1238,7 @@ paths:
         - AET
         - Australia/LHI
         - Australia/Lord_Howe
-        - Antarctica/Macquarie
+        - Antarctica/Casey
         - Asia/Magadan
         - Asia/Sakhalin
         - Asia/Srednekolymsk
@@ -1268,6 +1322,21 @@ paths:
         type: string
         required: false
       - in: query
+        name: usr_work_num
+        description: Search filter for Work phone number
+        type: string
+        required: false
+      - in: query
+        name: usr_home_num
+        description: Search filter for Home phone
+        type: string
+        required: false
+      - in: query
+        name: usr_cell_num
+        description: Search filter for Mobile/cellular phone number
+        type: string
+        required: false
+      - in: query
         name: usr_active
         description: Search filter for Active
         type: string
@@ -1285,21 +1354,6 @@ paths:
       - in: query
         name: usr_home_id__viw_name
         description: Search filter for Home page
-        type: string
-        required: false
-      - in: query
-        name: usr_work_num
-        description: Search filter for Work phone number
-        type: string
-        required: false
-      - in: query
-        name: usr_home_num
-        description: Search filter for Home phone
-        type: string
-        required: false
-      - in: query
-        name: usr_cell_num
-        description: Search filter for Mobile/cellular phone number
         type: string
         required: false
       - in: query
@@ -1340,8 +1394,8 @@ paths:
         - BE
         - CH
         - IE
-        - CA
         - US
+        - CA
       - in: query
         name: row_module_id
         description: Search filter for Module
@@ -1668,6 +1722,168 @@ paths:
         required: true
       tags:
       - TestUser
+  /rest/TestObjectDS/{tstDSId}:
+    post:
+      summary: Create a new TestObjectDSbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testobjectds-create
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/TestObjectDS'
+          description: Success in creating a new business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+      parameters:
+      - in: path
+        name: tstDSId
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/TestObjectDS'
+        in: body
+        name: body
+      tags:
+      - TestObjectDS
+      consumes:
+      - application/json
+    get:
+      summary: Get a TestObjectDS business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testobjectds-get
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/TestObjectDS'
+          description: Success in getting a single business object record
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: tstDSId
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - in: query
+        name: _inline_documents
+        description: Inline documents?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_thumbnails
+        description: Inline documents' thumbnails?
+        type: boolean
+        required: false
+      - in: query
+        name: _inline_objects
+        description: Inline objects?
+        type: boolean
+        required: false
+      tags:
+      - TestObjectDS
+    delete:
+      summary: Delete a TestObjectDS business object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testobjectds-delete
+      responses:
+        '200':
+          description: Success in deleting a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: tstDSId
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      tags:
+      - TestObjectDS
+    put:
+      summary: Update a TestObjectDSbusiness object record
+      security:
+      - bearerAuth: []
+      produces:
+      - application/json
+      operationId: obj-testobjectds-update
+      responses:
+        '200':
+          schema:
+            $ref: '#/definitions/TestObjectDS'
+          description: Success in updating a business object record
+        '400':
+          schema:
+            $ref: '#/definitions/Error400'
+          description: Bad request
+        '401':
+          schema:
+            $ref: '#/definitions/Error401'
+          description: Unauthorized
+        '500':
+          schema:
+            $ref: '#/definitions/Error500'
+          description: Internal server error
+        '404':
+          schema:
+            $ref: '#/definitions/Error404'
+          description: Not found
+      parameters:
+      - in: path
+        name: tstDSId
+        description: Row ID (or empty or _ for all row IDs)
+        type: string
+        required: true
+      - schema:
+          $ref: '#/definitions/TestObjectDS'
+        in: body
+        name: body
+      tags:
+      - TestObjectDS
+      consumes:
+      - application/json
   /rest/TestUser/{row_id}/publication:User-DEFAULT:
     get:
       summary: Call a custom publication for a TestUser business object record or
@@ -2100,7 +2316,6 @@ paths:
         type: string
         required: false
         enum:
-        - '2020'
         - '2021'
         - '2022'
         - '2023'
@@ -2111,6 +2326,7 @@ paths:
         - '2028'
         - '2029'
         - '2030'
+        - '2031'
       - in: query
         name: tstObj1Address
         description: Search filter for Address
@@ -2129,6 +2345,11 @@ paths:
       - in: query
         name: tstObj1Date
         description: Search filter for Date
+        type: string
+        required: false
+      - in: query
+        name: tstObj1Notepad
+        description: Search filter for Notepad
         type: string
         required: false
       tags:
@@ -2274,6 +2495,15 @@ definitions:
       tstLdapLogin:
         description: LDAP `cn` attribute
         type: string
+  TestObjectDS:
+    type: object
+    properties:
+      tstDSLabel:
+        description: Label
+        type: string
+      tstDSId:
+        description: ID
+        type: string
   ArrayOfTestUser:
     type: array
     items:
@@ -2281,6 +2511,22 @@ definitions:
   TestObject1a:
     type: object
     properties:
+      tst1aDesc:
+        description: Test 1a
+        type: string
+      tstObj1Code:
+        description: Code
+        type: string
+      tstObj1Date:
+        description: Date
+        type: string
+        example: yyyy-MM-dd
+      tstObj1Notepad:
+        description: Notepad
+        type: string
+      tstObj1Address:
+        description: Address
+        type: string
       tstObj1Image:
         description: Image
         type: object
@@ -2295,7 +2541,6 @@ definitions:
         description: Year (dynamic)
         type: string
         enum:
-        - '2020'
         - '2021'
         - '2022'
         - '2023'
@@ -2306,6 +2551,7 @@ definitions:
         - '2028'
         - '2029'
         - '2030'
+        - '2031'
       tstObj1Desc:
         description: Description
         type: string
@@ -2319,25 +2565,12 @@ definitions:
           - V2
           - V3
           - V4
-      tst1aDesc:
-        description: Test 1a
-        type: string
-      tstObj1Code:
-        description: Code
-        type: string
-      tstObj1Date:
-        description: Date
-        type: string
-        example: yyyy-MM-dd
       row_id:
         description: Unique technical row ID
         type: string
       tstObj1File:
         description: File
         type: object
-      tstObj1Address:
-        description: Address
-        type: string
   PublicationResult:
     type: object
     properties:
@@ -2351,6 +2584,10 @@ definitions:
     type: array
     items:
       $ref: '#/definitions/TestLDAP'
+  ArrayOfTestObjectDS:
+    type: array
+    items:
+      $ref: '#/definitions/TestObjectDS'
   ArrayOfTestObject1a:
     type: array
     items:
@@ -2384,7 +2621,6 @@ definitions:
         description: Year (dynamic)
         type: string
         enum:
-        - '2020'
         - '2021'
         - '2022'
         - '2023'
@@ -2395,6 +2631,7 @@ definitions:
         - '2028'
         - '2029'
         - '2030'
+        - '2031'
       tstObj1Desc:
         description: Description
         type: string
@@ -2421,6 +2658,9 @@ definitions:
       tstObj1File:
         description: File
         type: object
+      tstObj1Notepad:
+        description: Notepad
+        type: string
       tstObj1Address:
         description: Address
         type: string
@@ -2541,7 +2781,6 @@ definitions:
         - SystemV/PST8
         - SystemV/PST8PDT
         - US/Pacific
-        - US/Pacific-New
         - PST
         - America/Boise
         - America/Cambridge_Bay
@@ -2868,6 +3107,7 @@ definitions:
         - Africa/Gaborone
         - Africa/Harare
         - Africa/Johannesburg
+        - Africa/Juba
         - Africa/Khartoum
         - Africa/Kigali
         - Africa/Lubumbashi
@@ -2913,7 +3153,6 @@ definitions:
         - Africa/Asmera
         - Africa/Dar_es_Salaam
         - Africa/Djibouti
-        - Africa/Juba
         - Africa/Kampala
         - Africa/Mogadishu
         - Africa/Nairobi
@@ -2931,6 +3170,7 @@ definitions:
         - Europe/Minsk
         - Europe/Moscow
         - Europe/Simferopol
+        - Europe/Volgograd
         - Indian/Antananarivo
         - Indian/Comoro
         - Indian/Mayotte
@@ -2949,7 +3189,6 @@ definitions:
         - Europe/Samara
         - Europe/Saratov
         - Europe/Ulyanovsk
-        - Europe/Volgograd
         - Indian/Mahe
         - Indian/Mauritius
         - Indian/Reunion
@@ -3012,7 +3251,6 @@ definitions:
         - Etc/GMT-7
         - Indian/Christmas
         - VST
-        - Antarctica/Casey
         - Asia/Brunei
         - Asia/Choibalsan
         - Asia/Chongqing
@@ -3061,6 +3299,7 @@ definitions:
         - Australia/Yancowinna
         - ACT
         - Antarctica/DumontDUrville
+        - Antarctica/Macquarie
         - Asia/Ust-Nera
         - Asia/Vladivostok
         - Australia/ACT
@@ -3085,7 +3324,7 @@ definitions:
         - AET
         - Australia/LHI
         - Australia/Lord_Howe
-        - Antarctica/Macquarie
+        - Antarctica/Casey
         - Asia/Magadan
         - Asia/Sakhalin
         - Asia/Srednekolymsk
@@ -3152,8 +3391,8 @@ definitions:
         - BE
         - CH
         - IE
-        - CA
         - US
+        - CA
       usr_title:
         description: Title
         type: string
@@ -3279,7 +3518,7 @@ info:
     email: contact@simplicitesoftware.com
   description: API for module Test
   title: Test
-  version: '4.0'
+  version: '5'
 tags:
 - name: TestLDAP
   description: LDAP user
@@ -3289,5 +3528,7 @@ tags:
   description: Object 1a
 - name: TestObject2
   description: Object 2
+- name: TestObjectDS
+  description: Test datasource
 - name: TestUser
   description: Test user

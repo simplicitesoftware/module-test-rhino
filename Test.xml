@@ -5,7 +5,7 @@
 	<action>upsert</action>
 	<data>
 		<mdl_name>Test</mdl_name>
-		<mdl_version>4.0</mdl_version>
+		<mdl_version>5</mdl_version>
 		<mdl_prefix>test</mdl_prefix>
 		<mdl_url><![CDATA[{
 	"type": "git",
@@ -65,10 +65,10 @@ PostgreSQL:
 	<name>Disposition</name>
 	<action>upsert</action>
 	<data>
-		<dis_code>TestDisposition</dis_code>
+		<dis_code>Test</dis_code>
 		<dis_image/>
 		<dis_class/>
-		<dis_script_id>scripts/Disposition/TestDisposition.js</dis_script_id>
+		<dis_script_id>scripts/Disposition/Test.js</dis_script_id>
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 	</data>
 </object>
@@ -80,7 +80,7 @@ PostgreSQL:
 		<viw_ui/>
 		<viw_order>1</viw_order>
 		<viw_icon>science</viw_icon>
-		<viw_disp_id.dis_code>TestDisposition</viw_disp_id.dis_code>
+		<viw_disp_id.dis_code>Test</viw_disp_id.dis_code>
 		<viw_scope/>
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 		<viw_theme_id.thm_name/>
@@ -101,11 +101,11 @@ PostgreSQL:
 		<usr_last_name>Software</usr_last_name>
 		<usr_lang>ENU</usr_lang>
 		<usr_email>simplicite@simplicite.fr</usr_email>
-		<usr_active>1</usr_active>
-		<usr_home_id.viw_name>Home</usr_home_id.viw_name>
 		<usr_work_num/>
 		<usr_home_num/>
 		<usr_cell_num/>
+		<usr_active>1</usr_active>
+		<usr_home_id.viw_name>Home</usr_home_id.viw_name>
 		<usr_address1/>
 		<usr_address2/>
 		<usr_zipcode/>
@@ -1047,6 +1047,43 @@ PostgreSQL:
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 	</data>
 	<data>
+		<fld_name>tstObj1Notepad</fld_name>
+		<fld_dbname>obj1_notepad</fld_dbname>
+		<fld_visible>2</fld_visible>
+		<fld_updatable>1</fld_updatable>
+		<fld_required>0</fld_required>
+		<fld_fonctid>0</fld_fonctid>
+		<fld_research>1</fld_research>
+		<fld_researchreq>0</fld_researchreq>
+		<fld_sort>C</fld_sort>
+		<fld_more>0</fld_more>
+		<fld_listmore>0</fld_listmore>
+		<fld_listsum/>
+		<fld_tray/>
+		<fld_type>21</fld_type>
+		<fld_type_id.flt_code/>
+		<fld_list_id.lov_name/>
+		<fld_copy>1</fld_copy>
+		<fld_size>1000000</fld_size>
+		<fld_minsize/>
+		<fld_precision/>
+		<fld_fromdate_id.fld_name/>
+		<fld_dfault/>
+		<fld_indexable>0</fld_indexable>
+		<fld_autocomp>0</fld_autocomp>
+		<fld_groupby>0</fld_groupby>
+		<fld_updall>1</fld_updall>
+		<fld_case/>
+		<fld_righttoleft>0</fld_righttoleft>
+		<fld_rendering>ACT</fld_rendering>
+		<fld_speech/>
+		<fld_calc/>
+		<fld_objlist/>
+		<fld_comment/>
+		<fld_classification/>
+		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
+	</data>
+	<data>
 		<fld_name>tstObj1TestJavaObjectId</fld_name>
 		<fld_dbname>obj1_testjavaobject_id</fld_dbname>
 		<fld_visible>3</fld_visible>
@@ -1133,7 +1170,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -1170,7 +1207,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray>0</fld_tray>
+		<fld_tray/>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -1305,6 +1342,7 @@ PostgreSQL:
       <div class="field" data-field="tstObj1Lookup"></div>
     </div>
   </div>
+  <div class="field" data-field="tstObj1Notepad"></div>
 </div>
 ]]></ofa_ui>
 		<ofa_icon>building</ofa_icon>
@@ -1433,6 +1471,8 @@ PostgreSQL:
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
@@ -1495,6 +1535,8 @@ PostgreSQL:
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
@@ -1557,6 +1599,8 @@ PostgreSQL:
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
@@ -1619,6 +1663,8 @@ PostgreSQL:
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
@@ -1681,6 +1727,8 @@ PostgreSQL:
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
@@ -1743,6 +1791,8 @@ PostgreSQL:
 		<obo_btn_merge>P</obo_btn_merge>
 		<obo_btn_save>1</obo_btn_save>
 		<obo_btn_saveclose>1</obo_btn_saveclose>
+		<obo_btn_savenew>1</obo_btn_savenew>
+		<obo_btn_savecopy>1</obo_btn_savecopy>
 		<obo_btn_close>1</obo_btn_close>
 		<obo_tray>1</obo_tray>
 		<obo_dashboard>1</obo_dashboard>
@@ -2137,6 +2187,35 @@ PostgreSQL:
 		<obf_field_id.fld_name>tstObj1Date</obf_field_id.fld_name>
 		<obf_field_id.fld_type>4</obf_field_id.fld_type>
 		<obf_order>100</obf_order>
+		<obf_group_by/>
+		<obf_dfault_order/>
+		<obf_input/>
+		<obf_ref_field_id.fld_name/>
+		<obf_ref_object_id.obo_name/>
+		<obf_cascad/>
+		<obf_card/>
+		<obf_visible/>
+		<obf_ref_export>1</obf_ref_export>
+		<obf_copy/>
+		<obf_ref_order/>
+		<obf_fld_visible/>
+		<obf_fld_required/>
+		<obf_fld_updatable/>
+		<obf_fld_research/>
+		<obf_fld_more/>
+		<obf_fld_listmore/>
+		<obf_fld_researchreq/>
+		<obf_fld_dfault/>
+		<obf_field_id.fld_dfault/>
+		<obf_area_id.ofa_name>TestObject1-1</obf_area_id.ofa_name>
+		<obf_area_id.ofa_position>1</obf_area_id.ofa_position>
+		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
+	</data>
+	<data>
+		<obf_object_id.obo_name>TestObject1</obf_object_id.obo_name>
+		<obf_field_id.fld_name>tstObj1Notepad</obf_field_id.fld_name>
+		<obf_field_id.fld_type>21</obf_field_id.fld_type>
+		<obf_order>110</obf_order>
 		<obf_group_by/>
 		<obf_dfault_order/>
 		<obf_input/>
@@ -2970,6 +3049,18 @@ PostgreSQL:
 	</data>
 	<data>
 		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>tstObj1Notepad</tsl_id.fld_name>
+		<tsl_lang>ENU</tsl_lang>
+		<tsl_value>Notepad</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
 		<tsl_id.fld_name>tstObj1TestJavaObjectId</tsl_id.fld_name>
 		<tsl_lang>ENU</tsl_lang>
 		<tsl_value>Test Java object</tsl_value>
@@ -3225,6 +3316,18 @@ PostgreSQL:
 		<tsl_id.fld_name>tstObj1Lookup</tsl_id.fld_name>
 		<tsl_lang>FRA</tsl_lang>
 		<tsl_value>Utilisateur LDAP</tsl_value>
+		<tsl_simplehelp/>
+		<tsl_short_value/>
+		<tsl_placeholder/>
+		<tsl_listhelp/>
+		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
+		<tsl_tooltip/>
+	</data>
+	<data>
+		<tsl_typeField>F</tsl_typeField>
+		<tsl_id.fld_name>tstObj1Notepad</tsl_id.fld_name>
+		<tsl_lang>FRA</tsl_lang>
+		<tsl_value>tst obj 1notepad</tsl_value>
 		<tsl_simplehelp/>
 		<tsl_short_value/>
 		<tsl_placeholder/>

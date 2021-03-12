@@ -1,4 +1,4 @@
-TestDisposition.display = function(params) {
+Test.display = function(params) {
 	var p = new BootstrapWebPage("Custom disposition");
 	p.appendCore(this.getGrant()); // Global variables for current user
 	p.appendAjax(); // Ajax API
