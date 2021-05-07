@@ -430,7 +430,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -467,7 +467,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -504,7 +504,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -541,7 +541,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -578,7 +578,7 @@ PostgreSQL:
 		<fld_more>1</fld_more>
 		<fld_listmore>1</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -615,7 +615,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -652,7 +652,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -689,7 +689,7 @@ PostgreSQL:
 		<fld_more>1</fld_more>
 		<fld_listmore>1</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -726,7 +726,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -763,7 +763,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>15</fld_type>
 		<fld_type_id.flt_code>CODE</fld_type_id.flt_code>
 		<fld_list_id.lov_name/>
@@ -800,7 +800,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>25</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -837,7 +837,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>4</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -874,7 +874,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>11</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -911,7 +911,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>17</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -948,7 +948,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>20</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -985,7 +985,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>14</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name>TST_OBJ1_LIST</fld_list_id.lov_name>
@@ -1022,7 +1022,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -1059,7 +1059,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>21</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -1096,7 +1096,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -1133,7 +1133,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>7</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name>TST_OBJ1_YEAR</fld_list_id.lov_name>
@@ -1170,7 +1170,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>3</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -1207,7 +1207,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>1</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -1244,7 +1244,7 @@ PostgreSQL:
 		<fld_more>0</fld_more>
 		<fld_listmore>0</fld_listmore>
 		<fld_listsum/>
-		<fld_tray/>
+		<fld_tray>0</fld_tray>
 		<fld_type>0</fld_type>
 		<fld_type_id.flt_code/>
 		<fld_list_id.lov_name/>
@@ -1465,7 +1465,7 @@ PostgreSQL:
 		<obo_btn_export>P</obo_btn_export>
 		<obo_btn_listadd>1</obo_btn_listadd>
 		<obo_btn_listedit>1</obo_btn_listedit>
-		<obo_btn_listupsert/>
+		<obo_btn_listupsert>1</obo_btn_listupsert>
 		<obo_btn_updall>P</obo_btn_updall>
 		<obo_btn_delall>P</obo_btn_delall>
 		<obo_btn_merge>P</obo_btn_merge>
@@ -1480,6 +1480,8 @@ PostgreSQL:
 		<obo_search_ts/>
 		<obo_minrows/>
 		<obo_maxrows/>
+		<obo_sortable>1</obo_sortable>
+		<obo_list_areas>1</obo_list_areas>
 	</data>
 	<data>
 		<obo_name>TestObject1</obo_name>
@@ -1529,7 +1531,7 @@ PostgreSQL:
 		<obo_btn_export>P</obo_btn_export>
 		<obo_btn_listadd>1</obo_btn_listadd>
 		<obo_btn_listedit>1</obo_btn_listedit>
-		<obo_btn_listupsert/>
+		<obo_btn_listupsert>1</obo_btn_listupsert>
 		<obo_btn_updall>P</obo_btn_updall>
 		<obo_btn_delall>P</obo_btn_delall>
 		<obo_btn_merge>P</obo_btn_merge>
@@ -1544,6 +1546,8 @@ PostgreSQL:
 		<obo_search_ts/>
 		<obo_minrows/>
 		<obo_maxrows/>
+		<obo_sortable>1</obo_sortable>
+		<obo_list_areas>1</obo_list_areas>
 	</data>
 	<data>
 		<obo_name>TestObject1a</obo_name>
@@ -1593,7 +1597,7 @@ PostgreSQL:
 		<obo_btn_export>P</obo_btn_export>
 		<obo_btn_listadd>1</obo_btn_listadd>
 		<obo_btn_listedit>1</obo_btn_listedit>
-		<obo_btn_listupsert/>
+		<obo_btn_listupsert>1</obo_btn_listupsert>
 		<obo_btn_updall>P</obo_btn_updall>
 		<obo_btn_delall>P</obo_btn_delall>
 		<obo_btn_merge>P</obo_btn_merge>
@@ -1608,6 +1612,8 @@ PostgreSQL:
 		<obo_search_ts/>
 		<obo_minrows/>
 		<obo_maxrows/>
+		<obo_sortable>1</obo_sortable>
+		<obo_list_areas>1</obo_list_areas>
 	</data>
 	<data>
 		<obo_name>TestObject2</obo_name>
@@ -1657,7 +1663,7 @@ PostgreSQL:
 		<obo_btn_export>P</obo_btn_export>
 		<obo_btn_listadd>1</obo_btn_listadd>
 		<obo_btn_listedit>1</obo_btn_listedit>
-		<obo_btn_listupsert/>
+		<obo_btn_listupsert>1</obo_btn_listupsert>
 		<obo_btn_updall>P</obo_btn_updall>
 		<obo_btn_delall>P</obo_btn_delall>
 		<obo_btn_merge>P</obo_btn_merge>
@@ -1672,6 +1678,8 @@ PostgreSQL:
 		<obo_search_ts/>
 		<obo_minrows/>
 		<obo_maxrows/>
+		<obo_sortable>1</obo_sortable>
+		<obo_list_areas>1</obo_list_areas>
 	</data>
 	<data>
 		<obo_name>TestObjectDS</obo_name>
@@ -1721,7 +1729,7 @@ PostgreSQL:
 		<obo_btn_export>P</obo_btn_export>
 		<obo_btn_listadd>1</obo_btn_listadd>
 		<obo_btn_listedit>1</obo_btn_listedit>
-		<obo_btn_listupsert/>
+		<obo_btn_listupsert>1</obo_btn_listupsert>
 		<obo_btn_updall>P</obo_btn_updall>
 		<obo_btn_delall>P</obo_btn_delall>
 		<obo_btn_merge>P</obo_btn_merge>
@@ -1736,6 +1744,8 @@ PostgreSQL:
 		<obo_search_ts/>
 		<obo_minrows/>
 		<obo_maxrows/>
+		<obo_sortable>1</obo_sortable>
+		<obo_list_areas>1</obo_list_areas>
 	</data>
 	<data>
 		<obo_name>TestUser</obo_name>
@@ -1785,7 +1795,7 @@ PostgreSQL:
 		<obo_btn_export>P</obo_btn_export>
 		<obo_btn_listadd>1</obo_btn_listadd>
 		<obo_btn_listedit>1</obo_btn_listedit>
-		<obo_btn_listupsert/>
+		<obo_btn_listupsert>1</obo_btn_listupsert>
 		<obo_btn_updall>P</obo_btn_updall>
 		<obo_btn_delall>P</obo_btn_delall>
 		<obo_btn_merge>P</obo_btn_merge>
@@ -1800,6 +1810,8 @@ PostgreSQL:
 		<obo_search_ts/>
 		<obo_minrows/>
 		<obo_maxrows/>
+		<obo_sortable>1</obo_sortable>
+		<obo_list_areas>1</obo_list_areas>
 	</data>
 </object>
 <object>
@@ -2674,7 +2686,7 @@ PostgreSQL:
 		<map_object_id.obj_name>TestObject1</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
 		<map_order>20000</map_order>
-		<map_ext/>
+		<map_ext>0</map_ext>
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2690,7 +2702,7 @@ PostgreSQL:
 		<map_object_id.obj_name>TestObject2</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
 		<map_order>20020</map_order>
-		<map_ext/>
+		<map_ext>0</map_ext>
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2698,7 +2710,7 @@ PostgreSQL:
 		<map_object_id.obj_name>TestUser</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
 		<map_order>20100</map_order>
-		<map_ext/>
+		<map_ext>0</map_ext>
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 	</data>
 	<data>
@@ -2706,7 +2718,7 @@ PostgreSQL:
 		<map_object_id.obj_name>TestObjectDS</map_object_id.obj_name>
 		<map_process_id.pcs_name/>
 		<map_order>20200</map_order>
-		<map_ext/>
+		<map_ext>0</map_ext>
 		<row_module_id.mdl_name>Test</row_module_id.mdl_name>
 	</data>
 	<data>

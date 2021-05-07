@@ -1,4 +1,4 @@
-var TestExtObject = TestExtObject || (function($) {
+var TestExtObject = (function($) {
 	var app;
 
 	function render() {

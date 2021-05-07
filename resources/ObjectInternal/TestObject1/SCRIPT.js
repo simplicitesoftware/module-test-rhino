@@ -1,4 +1,4 @@
-var TestObject1 = TestObject1 || (function(ui) {
+var TestObject1 = (function(ui) {
 	if (!ui) return; // Do nothing on legacy UI
 	var app = ui.getAjax();
 	Simplicite.UI.hooks.TestObject1 = function(o, cbk) {
